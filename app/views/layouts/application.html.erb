@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fern</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag controller_name, media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag controller_name %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <div id="hmenu">
+  <div id="list-menu">
+    <table>
+      <tr>
+      <span style="cursor:pointer">
+      <th><%= link_to("Home", root_path) %></th>
+      <th><%= link_to("Foods", manage_foods_path) if user_signed_in? %></th>
+      <th><%= link_to("User Management", manage_users_path) if user_signed_in? %></th>
+      <th><%= link_to("Login", login_path) unless user_signed_in? %><th>
+      <th><%= link_to("Logout", destroy_user_session_path) if user_signed_in? %></th>
+      </tr>
+      </span>
+  </table>
+  </div>
+</div>
+  <div class="bodywrap">
+
+    <%= yield %>
+
+</div>
+</body>
+<footer>
+  <div id="footer">Footer</div>
+</footer>
+</html>

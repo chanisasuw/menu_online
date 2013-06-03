@@ -1,0 +1,21 @@
+<h1>Users management</h1>
+<br>
+<br>
+<%= link_to(("Create a new user"), new_manage_user_path) %>
+<br>
+<%= will_paginate @users %>
+<table class="table table-striped">
+<br>
+
+
+<tr>
+<th>ID</th>
+<th>Email</th>
+<th>Create at</th>
+<th>Action</th>
+
+</tr>
+<tr>
+      <%= render partial: "list_users", collection: @users, as: "user" %>
+    </tr>
+</table>

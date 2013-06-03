@@ -1,0 +1,8 @@
+<tr>
+  <td class="fields"><%= user.id %></td>
+  <td class="fields"><%= user.email %></td>
+  <td class="fields"><%= user.created_at.localtime.rfc822 %></td>
+  <td class="fields"><%= link_to("View", manage_user_path(user), method: "get" ) %>
+  <class="fields"><%= link_to("Edit", manage_user_path(user), method: "get" ) %>
+  <class="fields"><%= link_to("Delete", manage_user_path(user), method: :delete , data: { confirm: "Are you sure?" }) %></td>
+</tr>
