@@ -31,6 +31,8 @@ gem 'will_paginate'
 gem "therubyracer"
 gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'bootstrap-wysihtml5-rails', :require => 'bootstrap-wysihtml5-rails',
+                              :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
 gem "paperclip"
 
 group :development, :test, :staging do

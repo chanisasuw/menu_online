@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/Nerian/bootstrap-wysihtml5-rails.git
+  revision: 2eddb58a17b543b7a923741b7f5f4fac7b7144a0
+  specs:
+    bootstrap-wysihtml5-rails (0.3.1.20)
+      railties (>= 3.0)
+
+GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: 4aa0f0e661bc4664f59fd3e4287f7acf4d1330e8
   specs:
@@ -197,6 +204,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-wysihtml5-rails!
   capybara
   coffee-rails (~> 4.0.0)
   database_cleaner

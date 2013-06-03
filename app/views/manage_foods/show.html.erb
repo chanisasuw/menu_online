@@ -1,0 +1,24 @@
+<div id="content">
+  <h3>Food Details</h3>
+  <table>
+      <tr>
+        <td class="flied_name"> Food Name: </td>
+        <td><%= @food.name %></td>
+      </tr>
+      <tr>
+        <td class="flied_name"> Price: </td>
+        <td><%= @food.price %></td>
+      </tr>
+
+        <tr>
+        <td class="flied_name"> Short Comment: </td>
+        <td><%= @food.short_comment %></td>
+      </tr>
+
+        <tr>
+        <td class="flied_name"> Description: </td>
+        <td><%= @food.description.html_safe %></td>
+      </tr>
+
+      </table>
+    </div>

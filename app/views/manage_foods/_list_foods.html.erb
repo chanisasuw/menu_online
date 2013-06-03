@@ -1,7 +1,8 @@
 <tr>
   <td class="fields"><%= food.id %></td>
   <td class="fields"><%= food.name %></td>
-  <td class="fields"><%= link_to("View", manage_food_path(user), method: "get" ) %>
-  <class="fields"><%= link_to("Edit", edit_manage_food_path(user), method: "get" ) %>
-  <class="fields"><%= link_to("Delete", manage_food_path(user), method: :delete , data: { confirm: "Are you sure?" }) %></td>
+  <td class="fields"><%= food.created_at.localtime.rfc822 %></td>
+  <td class="fields"><%= link_to("View", manage_food_path(food), method: "get" ) %>
+  <class="fields"><%= link_to("Edit", edit_manage_food_path(food), method: "get" ) %>
+  <class="fields"><%= link_to("Delete", manage_food_path(food), method: :delete , data: { confirm: "Are you sure?" }) %></td>
 </tr>

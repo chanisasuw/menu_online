@@ -1,6 +1,6 @@
 FactoryGirl.define do
+  sequence(:food_name)        {|n| "food_#{n}" }
   factory :food do
-    name           { "Food #{FactoryGirl.generate(:food_id)}"   }
-    price          { "15 #{FactoryGirl.generate(:price)}/"  }
+    name                   { "#{FactoryGirl.generate(:customer_name)}"   }
   end
 end

@@ -46,9 +46,6 @@ body {
 }
 
 
-
-
-
 a {
     color: #000000;
     text-decoration: none;
@@ -57,4 +54,14 @@ a {
 a:hover {
     color: #3EA99F;
     text-decoration: none;
+}
+
+
+
+.notice {
+  color: #C58806;
+}
+
+.error, .notice {
+  margin: 10px 0;
 }

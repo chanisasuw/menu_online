@@ -34,6 +34,22 @@ class ManageUsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+   def update
+    @user = User.find(params[:id])
+
+    @user.attributes = edit_user_params
+
+    if @user.save
+      flash[:notice] = "Update user successfully"
+      redirect_to(manage_users_path)
+    else
+      flash.now[:error] = []
+      flash[:error] << "Cannot update user profile"
+      flash[:error] << "#{@user.errors.full_messages.join(", ")}"
+      render action: :edit
+    end
+  end
+
   def destroy
     user = User.find(params[:id])
     user.destroy
@@ -46,6 +62,13 @@ class ManageUsersController < ApplicationController
   def user_create_params
     params.require(:user).permit(
       :email)
+  end
+
+   def edit_user_params
+    params.require(:user).permit(
+      :name,
+      :email,
+    )
   end
 end
 

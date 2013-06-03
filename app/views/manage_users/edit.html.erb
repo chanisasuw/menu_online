@@ -1,2 +1,25 @@
 <h1>Edit user</h1>
+<br>
+<%= form_for @user, :url => manage_user_url do |f| %>
+  <table class="table">
+    <tr>
+    <td><%= ("Email") %></td>
+    <td><span class="span3">
+      <%= f.email_field :email , required: true %>
+      </span>
+      <br>
+    </td>
+    </tr>
+    <tr>
+    <td></td>
+    <div><td><span class="span3">
+      <%= f.submit "Edit", class: "btn" %>
+      </span>
+    </td>
+    </div>
+    </tr>
+  </table>
+</div>
+<% end -%>
+
 

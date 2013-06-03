@@ -14,11 +14,13 @@
 ActiveRecord::Schema.define(version: 20130603103005) do
 
   create_table "foods", force: true do |t|
-    t.string  "name",                          null: false
-    t.text    "short_comment"
-    t.text    "description"
-    t.decimal "price",         default: 0.0
-    t.boolean "status",        default: false
+    t.string   "name",                          null: false
+    t.text     "short_comment"
+    t.text     "description"
+    t.decimal  "price",         default: 0.0
+    t.boolean  "status",        default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
