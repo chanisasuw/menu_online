@@ -5,6 +5,13 @@
 <%= form_for @food, :url => manage_foods_url do |f| %>
   <table class="table">
     <tr>
+    <td><%= ("Photo Food: ") %></td>
+    <td><span class="span1">
+     <%= f.file_field :photo %>
+       </span>
+         </td>
+    </tr>
+    <tr>
     <td><%= ("Food Name: ") %></td>
     <td><span class="span1">
       <%= f.text_field :name, required: true , type: "text" %>

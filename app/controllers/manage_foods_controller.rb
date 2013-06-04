@@ -14,8 +14,9 @@ class ManageFoodsController < ApplicationController
     @food.price = params[:food][:price]
     @food.short_comment = params[:food][:short_comment]
     @food.description = params[:food][:description]
+    @food.photo = params[:food][:photo]
     if @food.save
-    flash[:notice] = "Save food successfully."
+    flash[:notice] = "Created menu successfully."
     redirect_to(manage_foods_path)
     end
   end
@@ -24,10 +25,26 @@ class ManageFoodsController < ApplicationController
     @food = Food.find(params[:id])
   end
 
+  def edit
+    @food = Food.find(params[:id])
+  end
+
+  def update
+    @food = Food.find(params[:id])
+    @food.name = params[:food][:name]
+    @food.price = params[:food][:price]
+    @food.short_comment = params[:food][:short_comment]
+    @food.description = params[:food][:description]
+    if @food.save
+    flash[:notice] = "Update menu successfully."
+    redirect_to(manage_foods_path)
+    end
+  end
+
   def destroy
     food = Food.find(params[:id])
     food.destroy
     redirect_to(manage_foods_path)
-    flash[:notice] = "Deleted user successfully."
+    flash[:notice] = "Deleted menu successfully."
   end
 end

@@ -5,6 +5,7 @@ body {
 
 .bodywrap {
   width: 80%;
+  min-height: 1000px;
   margin: 0 auto;
 }
 
@@ -65,3 +66,20 @@ a:hover {
 .error, .notice {
   margin: 10px 0;
 }
+
+
+footer {
+  clear: both;
+  background-color: #C58006;
+  div#footer{
+    padding-top: 5px;
+    width: 80%;
+    margin: 0 auto;
+    height: 30px;
+    bottom: -5px;
+    color: #FFF;
+  }}
+
+  .table-menu {
+
+  }

@@ -3,6 +3,13 @@
   <table>
       <tr>
         <td class="flied_name"> Food Name: </td>
+        <td>
+            <%= image_tag @food.photo.url(:thumb) %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="flied_name"> Food Name: </td>
         <td><%= @food.name %></td>
       </tr>
       <tr>
