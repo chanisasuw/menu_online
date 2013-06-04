@@ -1,34 +1,40 @@
 body {
-  background-color: #EDEDED;
+  background-color: #FFFFFF;
   height: 100%;
 }
 
 .bodywrap {
-  width: 80%;
-  min-height: 1500px;
-  margin: 0 auto;
+  width: 100%;
+  min-height: 800px;
+  margin: 3px auto;
 }
 
 #hmenu {
-  height: 50px;
-  border: 0px solid #EEE;
-  background-color: #9ED8D5;
-  font-family: Arial,Helvetica,Sans-Serif;
+  height: 40px;
+  width: 100%;
+  border: 1px solid #FFFFFF;
+  background-color: #FFFFFF;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 95%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  z-index: 100%;
+
 
 
   div#list-menu {
     width: 80%;
     margin: 0 auto;
-    padding-top: 16px;
+    padding-top: 12px;
+    float: left;
 
     a {
-      color: #FFFFFF;
+      color: #000000;
+
     }
 
     a:hover {
-    color: #CFECEC;
+    color: #FFCC99;
     text-decoration: none;
     }
 
@@ -42,7 +48,7 @@ body {
 
     table tr th {
 
-      padding-left: 50px;
+      padding-left: 25px;
     }
 
     li.right-size {
@@ -58,7 +64,7 @@ a {
 }
 
 a:hover {
-    color: #3EA99F;
+    color: #FF0000;
     text-decoration: none;
 }
 
@@ -74,7 +80,7 @@ a:hover {
 
 footer {
   clear: both;
-  background-color: #9ED8D5;
+  background-color: #E0E0E0;
   width: 100%;
 }
 
@@ -82,7 +88,7 @@ footer {
     padding-top: 5px;
     width: 100%;
     margin: 0 auto;
-    height: 100px;
+    height: 50px;
     bottom: -5px;
     color: #FFF;
   }

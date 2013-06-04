@@ -1,0 +1,12 @@
+.carousel{
+  background: #D1D0CE;
+  border-radius: 0px;
+}
+.carousel-control {
+  background: #239AB2;
+}
+
+.carousel-indicators .active
+{
+  background: #239AB2;
+}

@@ -14,13 +14,13 @@
 
     <table class= "table-menu">
       <tr>
-      <th><span style="cursor:pointer"><%= link_to("Home", root_path) %>  </span></th>
+      <th><span style="cursor:pointer"><%= link_to("HOME", root_path) %>  </span></th>
       <% if user_signed_in? %>
-      <th><span style="cursor:pointer"><%= link_to("Foods", manage_foods_path) %>  </span></th>
-      <th><span style="cursor:pointer"><%= link_to("User Management", manage_users_path)  %>  </span></th>
-      <th><span style="cursor:pointer"><%= link_to("Logout", destroy_user_session_path) %>  </span></th>
+      <th><span style="cursor:pointer"><%= link_to("MENU", manage_foods_path) %>  </span></th>
+      <th><span style="cursor:pointer"><%= link_to("USER MANAGEMENT", manage_users_path)  %>  </span></th>
+      <th><span style="cursor:pointer"><%= link_to("LOGOUT", destroy_user_session_path) %>  </span></th>
       <% end %>
-      <th><span style="cursor:pointer"><%= link_to("Login", login_path) unless user_signed_in? %>  </span><th>
+      <th><span style="cursor:pointer"><%= link_to("LOGIN", login_path) unless user_signed_in? %>  </span><th>
       </tr>
   </table>
 

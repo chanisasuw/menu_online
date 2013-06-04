@@ -1,5 +1,6 @@
-<div class = "main">
+<div class = "wrap">
 
+<div class = "main">
 <h3>Log In</h3>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
@@ -15,7 +16,7 @@
 
   <% if devise_mapping.rememberable? -%>
   <tr><td></td><td><%= f.check_box :remember_me, class: "span" %> &nbsp;&nbsp; <%= f.label :remember_me %></td></tr>
-<tr><td></td><td><%= f.submit "Sign in" , class: "btn btn-info" %></td></tr>
+<tr><td></td><td><%= f.submit "Sign in" , class: "btn btn-danger" %></td></tr>
 <% end %>
  </table>
   <% end -%>
@@ -24,4 +25,5 @@
 <br>
 <%= render "devise/shared/links" %>
 
+</div>
 </div>
