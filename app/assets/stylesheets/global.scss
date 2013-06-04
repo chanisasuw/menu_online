@@ -63,7 +63,6 @@ a:hover {
 }
 
 
-
 .notice {
   color: #C58806;
 }
@@ -76,14 +75,17 @@ a:hover {
 footer {
   clear: both;
   background-color: #9ED8D5;
-  div#footer{
+  width: 100%;
+}
+
+ div#footer{
     padding-top: 5px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     height: 100px;
     bottom: -5px;
     color: #FFF;
-  }}
+  }
 
   .table-menu {
 
