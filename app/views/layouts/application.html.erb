@@ -11,17 +11,17 @@
 <body>
  <div id="hmenu">
   <div id="list-menu">
+
     <table class= "table-menu">
       <tr>
-      <span style="cursor:pointer">
-      <th><%= link_to("Home", root_path) %></th>
-      <th><%= link_to("Foods", manage_foods_path) if user_signed_in? %></th>
-      <th><%= link_to("User Management", manage_users_path) if user_signed_in? %></th>
-      <th><%= link_to("Login", login_path) unless user_signed_in? %><th>
-      <th><%= link_to("Logout", destroy_user_session_path) if user_signed_in? %></th>
+      <th><span style="cursor:pointer"><%= link_to("Home", root_path) %>  </span></th>
+      <th><span style="cursor:pointer"><%= link_to("Foods", manage_foods_path) if user_signed_in? %>  </span></th>
+      <th><span style="cursor:pointer"><%= link_to("User Management", manage_users_path) if user_signed_in? %>  </span></th>
+      <th><span style="cursor:pointer"><%= link_to("Logout", destroy_user_session_path) if user_signed_in? %>  </span></th>
+      <th><span style="cursor:pointer"><%= link_to("Login", login_path) unless user_signed_in? %>  </span><th>
       </tr>
-      </span>
   </table>
+
   </div>
 </div>
   <div class="bodywrap">

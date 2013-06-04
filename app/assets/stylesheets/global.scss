@@ -5,16 +5,16 @@ body {
 
 .bodywrap {
   width: 80%;
-  min-height: 1000px;
+  min-height: 1500px;
   margin: 0 auto;
 }
 
 #hmenu {
-  height: 80px;
+  height: 50px;
   border: 0px solid #EEE;
   background-color: #9ED8D5;
   font-family: Arial,Helvetica,Sans-Serif;
-  font-size: 1.5em;
+  font-size: 1em;
   line-height: 95%;
 
 
@@ -38,6 +38,11 @@ body {
         display: inline-block;
         margin: 10px;
       }
+    }
+
+    table tr th {
+
+      padding-left: 50px;
     }
 
     li.right-size {
@@ -70,12 +75,12 @@ a:hover {
 
 footer {
   clear: both;
-  background-color: #C58006;
+  background-color: #9ED8D5;
   div#footer{
     padding-top: 5px;
     width: 80%;
     margin: 0 auto;
-    height: 30px;
+    height: 100px;
     bottom: -5px;
     color: #FFF;
   }}
