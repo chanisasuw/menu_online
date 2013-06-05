@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   background-color: #FFFFFF;
   height: 100%;
@@ -6,19 +10,20 @@ body {
 .bodywrap {
   width: 100%;
   min-height: 800px;
-  margin: 3px auto;
+  margin: 0px auto;
 }
 
 #hmenu {
   height: 40px;
   width: 100%;
-  border: 1px solid #FFFFFF;
-  background-color: #FFFFFF;
+  border: 1px solid #800517;
+  background-color: #800517;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 95%;
   box-shadow: 0 1px 3px rgba(0,0,0,0.4);
   z-index: 100%;
+  position:fixed;
 
 
 
@@ -27,14 +32,15 @@ body {
     margin: 0 auto;
     padding-top: 12px;
     float: left;
+    background-color: #800517;
 
     a {
-      color: #000000;
+      color: #FFCC99;
 
     }
 
     a:hover {
-    color: #FFCC99;
+    color: #FFDB58;
     text-decoration: none;
     }
 
@@ -57,14 +63,13 @@ body {
   }
 }
 
-
 a {
     color: #000000;
     text-decoration: none;
 }
 
 a:hover {
-    color: #FF0000;
+    color: #990012;
     text-decoration: none;
 }
 
@@ -80,7 +85,7 @@ a:hover {
 
 footer {
   clear: both;
-  background-color: #E0E0E0;
+  background-color: #f5f5f5;
   width: 100%;
 }
 
@@ -88,9 +93,11 @@ footer {
     padding-top: 5px;
     width: 100%;
     margin: 0 auto;
-    height: 50px;
+    height: 90px;
     bottom: -5px;
-    color: #FFF;
+    color: #777;
+    text-align: center;
+    border-top: 1px solid #e5e5e5
   }
 
   .table-menu {

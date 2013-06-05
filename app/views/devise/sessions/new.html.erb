@@ -1,3 +1,5 @@
+<br>
+<br>
 <div class = "wrap">
 
 <div class = "main">
@@ -15,8 +17,18 @@
       </tr>
 
   <% if devise_mapping.rememberable? -%>
-  <tr><td></td><td><%= f.check_box :remember_me, class: "span" %> &nbsp;&nbsp; <%= f.label :remember_me %></td></tr>
-<tr><td></td><td><%= f.submit "Sign in" , class: "btn btn-danger" %></td></tr>
+  <tr>
+    <td></td>
+    <td>
+      <div class="row-fluid">
+          <div style="vertical-align: middle; padding-bottom: 5px;"><%= f.check_box :remember_me %> &nbsp; Remember Me</div>
+      </div>
+    </td>
+  </tr>
+<tr style="padding-top: 10px;">
+  <td></td>
+  <td><div style="padding-top: 5px;"><%= f.submit "Sign in" , class: "btn btn-warning" %></div></td>
+</tr>
 <% end %>
  </table>
   <% end -%>

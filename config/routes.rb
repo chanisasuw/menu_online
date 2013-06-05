@@ -9,6 +9,7 @@ Fern::Application.routes.draw do
   resources :manage_users, only: [:index, :new, :create, :edit, :update, :show, :destroy]
   resources :home, only: [:index]
   resources :manage_foods
+  resources :menu ,only: [:index, :show]
   # do
   #   member do
   #     get :test

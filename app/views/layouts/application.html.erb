@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fern</title>
+  <title>Thai Wild Lime - South Yarra</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= stylesheet_link_tag controller_name, media: "all" %>
   <%= javascript_include_tag "application" %>
@@ -15,9 +15,11 @@
     <table class= "table-menu">
       <tr>
       <th><span style="cursor:pointer"><%= link_to("HOME", root_path) %>  </span></th>
+      <th><span style="cursor:pointer"><%= link_to("MENU", menu_index_path) %></span></th>
+
       <% if user_signed_in? %>
-      <th><span style="cursor:pointer"><%= link_to("MENU", manage_foods_path) %>  </span></th>
-      <th><span style="cursor:pointer"><%= link_to("USER MANAGEMENT", manage_users_path)  %>  </span></th>
+      <th><span style="cursor:pointer"><%= link_to("FOODS MANAGEMENT", manage_foods_path) %>  </span></th>
+      <th><span style="cursor:pointer"><%= link_to("USERS MANAGEMENT", manage_users_path)  %>  </span></th>
       <th><span style="cursor:pointer"><%= link_to("LOGOUT", destroy_user_session_path) %>  </span></th>
       <% end %>
       <th><span style="cursor:pointer"><%= link_to("LOGIN", login_path) unless user_signed_in? %>  </span><th>
@@ -31,9 +33,14 @@
     <%= yield %>
 
   </div>
-
 <footer>
-  <div id="footer">Footer</div>
+  <div id="footer">
+  <address>
+  <strong>Thai Wild Lime</strong><br>
+  69 Davis Avenue<br>
+  South Yarra Victoria, Australia 3141<br>
+  <abbr title="Phone">P:</abbr> (+61) 3-9876-6444
+</address>
 </footer>
 </body>
 </html>

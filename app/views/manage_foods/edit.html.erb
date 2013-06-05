@@ -1,12 +1,13 @@
+<div id="foodwrap">
 <h2>Edit Food</h2>
 <br>
 <br>
 <div id="edit_food">
-<%= form_for @food, :url => manage_foods_url do |f| %>
-  <table class="table">
+<%= form_for @food, :url => manage_food_url do |f| %>
+  <table class="table table-striped">
     <tr>
       <td></td>
-      <td><span class="img-polaroid"> <%= image_tag @food.photo.url(:thumb) %> </span>
+      <td><div class="image"> <%= image_tag @food.photo.url(:thumb) %> </div>
       </td>
 
     </tr>
@@ -56,7 +57,7 @@
     <tr>
     <td></td>
     <div><td><span class="span3">
-      <%= f.submit "Create", class: "btn" %>
+      <%= f.submit "Update", class: "btn" %>
       </span>
     </td>
     </div>
@@ -65,3 +66,4 @@
 </div>
 <% end -%>
 <script type="text/javascript"> $('#description').each(function(i, elem) {$(elem).wysihtml5(); });</script>
+</div>

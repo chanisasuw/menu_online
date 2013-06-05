@@ -10,3 +10,29 @@
 {
   background: #239AB2;
 }
+
+.hero-unit
+{
+background: linear-gradient(50deg, #E78A61 0%,#800517 100%);
+background-repeat:repeat-x;
+}
+
+div#main-continer {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 40px;
+  border-left: 1px solid #DDD;
+  border-right: 1px solid #DDD;
+  bottom: 30px;
+  background-color: #FFF;
+  width: 80%;
+  min-height: 900px;;
+  margin: 0 auto;
+  padding: 10px;
+
+  .image {
+    border: solid 2px #eee;
+    width: 100px;
+
+  }
+}

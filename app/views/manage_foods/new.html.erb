@@ -1,9 +1,10 @@
+<div id="foodwrap">
 <h2>Create a new menu</h2>
 <br>
 <br>
 <div id="new_food">
 <%= form_for @food, :url => manage_foods_url do |f| %>
-  <table class="table">
+  <table class="table table-striped">
     <tr>
     <td><%= ("Photo Food: ") %></td>
     <td><span class="span1">
@@ -59,3 +60,4 @@
 </div>
 <% end -%>
 <script type="text/javascript"> $('#description').each(function(i, elem) {$(elem).wysihtml5(); });</script>
+</div>

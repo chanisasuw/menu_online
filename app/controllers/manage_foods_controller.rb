@@ -35,7 +35,7 @@ class ManageFoodsController < ApplicationController
     @food.price = params[:food][:price]
     @food.short_comment = params[:food][:short_comment]
     @food.description = params[:food][:description]
-    @food.photo = params[:food][:photo]
+    @food.photo = params[:food][:photo] if  params[:food][:photo].present?
     if @food.save
     flash[:notice] = "Update menu successfully."
     redirect_to(manage_foods_path)

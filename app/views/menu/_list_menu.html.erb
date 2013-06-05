@@ -1,0 +1,19 @@
+<div class="food">
+  <table>
+    <tr><th><div class="image">
+        <%= image_tag food.photo.url(:medium) %>
+    </div></th>
+    </tr>
+    <td><h5><%= food.name %><h5></td>
+    <td rowspan="3"> <% link_to("View", manage_food_path(food), method: "get" ) %> </td>
+    <tr>
+      <td><%= food.short_comment %></td>
+    </tr>
+    <tr>
+      <td><i class="icon-map-marker"></i> Price: $<%= food.price %>
+      <div class="icon-plus-sign"><%= link_to("Details", manage_food_path(food), method: "get" ) %>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</div>
