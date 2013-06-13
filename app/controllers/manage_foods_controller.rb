@@ -6,6 +6,7 @@ class ManageFoodsController < ApplicationController
 
   def new
     @food = Food.new
+    @categories = Category.all
   end
 
   def create
@@ -15,6 +16,7 @@ class ManageFoodsController < ApplicationController
     @food.short_comment = params[:food][:short_comment]
     @food.description = params[:food][:description]
     @food.photo = params[:food][:photo]
+    @food.category = Category.find(params[:food][:category])
     if @food.save
     flash[:notice] = "Created menu successfully."
     redirect_to(manage_foods_path)
@@ -36,6 +38,7 @@ class ManageFoodsController < ApplicationController
     @food.short_comment = params[:food][:short_comment]
     @food.description = params[:food][:description]
     @food.photo = params[:food][:photo] if  params[:food][:photo].present?
+    @food.category = Category.find(params[:food][:category])
     if @food.save
     flash[:notice] = "Update menu successfully."
     redirect_to(manage_foods_path)

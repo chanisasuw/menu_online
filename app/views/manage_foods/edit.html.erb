@@ -18,6 +18,17 @@
        </span>
          </td>
     </tr>
+
+      </tr>
+    <tr>
+    <td><%= ("Category: ") %></td>
+    <td><span class="span1">
+      <%= f.select :category, options_for_select(Category.all.map{|c| [c.name, c.id]}) %>
+      </span>
+      <br>
+    </td>
+    </tr>
+
     <tr>
     <td><%= ("Food Name: ") %></td>
     <td><span class="span1">

@@ -1,0 +1,24 @@
+<div id="category">
+<h1>Categories</h1>
+<br>
+<br>
+<%= link_to(("Create a new category"), new_category_path) %>
+<br>
+<table class="table table-striped">
+<br>
+
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Description</th>
+<th>Create at</th>
+<th>Action</th>
+
+</tr>
+<tr>
+      <%= render partial: "list_categories", collection: @categories, as: "category" %>
+    </tr>
+</table>
+</div>
+

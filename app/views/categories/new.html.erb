@@ -1,0 +1,36 @@
+<div id="category">
+<h2>Create a new category</h2>
+<br>
+<br>
+<div id="new_category">
+<%= form_for @category, :url => categories_url do |f| %>
+  <table class="table table-striped">
+    <tr>
+    <td><%= ("Category name: ") %></td>
+    <td><span class="span1">
+     <%= f.text_field :name, required: true %>
+       </span>
+         </td>
+    </tr>
+
+    <tr>
+    <td><%= ("Description: ") %></td>
+    <td><span class="span3">
+      <%= f.text_area :description , id: "description" , placeholder: "fill in description.." %>
+      </span>
+      <br>
+    </td>
+    </tr>
+
+    <tr>
+    <td></td>
+    <div><td><span class="span3">
+      <%= f.submit "Create", class: "btn" %>
+      </span>
+    </td>
+    </div>
+    </tr>
+  </table>
+</div>
+<% end -%>
+</div>

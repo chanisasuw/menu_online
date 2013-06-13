@@ -1,0 +1,7 @@
+<tr>
+  <td class="fields"><%= category.id %></td>
+  <td class="fields"><%= category.name %></td>
+  <td class="fields"><%= category.description %></td>
+  <td class="fields"><%= category.created_at.localtime.rfc822 %></td>
+  <td class="fields"><%= link_to("Delete", category_path(category), method: :delete , data: { confirm: "Are you sure?" }) %></td>
+</tr>
