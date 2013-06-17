@@ -15,7 +15,7 @@ class ManageUsersController < ApplicationController
     @user.password = random
     @user.password_confirmation = random
     if @user.save
-      # @user.deliver_password_reset_instructions
+      @user.deliver_password_reset_instructions
       flash[:notice] = "Create user successfully."
       redirect_to(manage_users_path)
     else
