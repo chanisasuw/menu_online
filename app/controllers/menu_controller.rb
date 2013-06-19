@@ -1,7 +1,7 @@
 class MenuController < ApplicationController
 
   def index
-    @foods = Food.all.sort_by(&:category)
+    @foods = Food.all
   end
 
   def show

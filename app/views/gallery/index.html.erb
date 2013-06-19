@@ -1,0 +1,11 @@
+ <section id="options" class="clearfix">
+<div id="filters" class="option-set clearfix" data-option-key="filter">
+  <a href="#filters" data-filter="*">show all</a>
+   <%= render partial: "list_category", collection: @categories, as: :category %>
+</div>
+</section>
+
+<div id="container" class="clearfix">
+      <%= render partial: "list_photo", collection: @foods , as: :food %>
+</div>
+

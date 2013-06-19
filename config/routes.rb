@@ -11,6 +11,7 @@ Fern::Application.routes.draw do
   resources :manage_foods
   resources :menu ,only: [:index, :show]
   resources :categories, only: [:index, :new, :create, :destroy]
+  resources :gallery, only: [:index]
   # do
   #   member do
   #     get :test

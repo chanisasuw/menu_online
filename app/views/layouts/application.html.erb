@@ -16,7 +16,7 @@
       <tr>
       <th><span style="cursor:pointer"><%= link_to("HOME", root_path) %>  </span></th>
       <th><span style="cursor:pointer"><%= link_to("MENU", menu_index_path) %></span></th>
-
+      <th><span style="cursor:pointer"><%= link_to("Gallery", gallery_index_path) %></span></th>
       <% if user_signed_in? %>
       <th><span style="cursor:pointer"><%= link_to("FOODS MANAGEMENT", manage_foods_path) %>  </span></th>
       <th><span style="cursor:pointer"><%= link_to("CATEGORIES", categories_path) %>  </span></th>
@@ -34,6 +34,7 @@
     <%= yield %>
 
   </div>
+</body>
 <footer>
   <div id="footer">
   <address>
@@ -43,5 +44,4 @@
   <abbr title="Phone">P:</abbr> (+61) 3-9876-6444
 </address>
 </footer>
-</body>
 </html>
