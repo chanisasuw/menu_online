@@ -12,6 +12,7 @@ Fern::Application.routes.draw do
   resources :menu ,only: [:index, :show]
   resources :categories, only: [:index, :new, :create, :destroy]
   resources :gallery, only: [:index]
+  resources :camera, only: [:index]
   # do
   #   member do
   #     get :test
