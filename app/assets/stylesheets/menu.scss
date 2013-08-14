@@ -5,7 +5,7 @@ div#con {
   border-left: 1px solid #DDD;
   border-right: 1px solid #DDD;
   bottom: 30px;
-  background-color: #FFF;
+  background: rgba(255,255,255, 0.9);
   width: 80%;
   min-height: 1000px;
   margin: 0 auto;
@@ -28,5 +28,9 @@ display: block;
 .image {
   border: solid 2px #eee
 }
+}
+
+.bodywrap{
+background-image:url('http://khongthe.com/wallpapers/nature/spices-247576.jpg');
 }
 

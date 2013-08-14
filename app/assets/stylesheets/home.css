@@ -24,9 +24,9 @@ div#main {
   border-left: 1px solid #DDD;
   border-right: 1px solid #DDD;
   bottom: 30px;
-  background-color: #FFF;
+  background: rgba(255,255,255, 0.9);
   width: 80%;
-  min-height: 900px;;
+  min-height: 850px;;
   margin: 0 auto;
   padding: 10px;
 
@@ -43,6 +43,11 @@ div#main {
   margin-left: 50px;
   margin-right: 50px;
 }
+
+.bodywrap{
+background-image:url('http://www.authenticasia.net/images/thai-bg.jpg');
+}
+
 
 
 
