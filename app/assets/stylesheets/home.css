@@ -1,54 +1,9 @@
-.carousel{
-  background: #D1D0CE;
-  border-radius: 0px;
-}
-.carousel-control {
-  background: #239AB2;
-}
-
-.carousel-indicators .active
-{
-  background: #239AB2;
-}
-
-.hero-unit
-{
-background: linear-gradient(50deg, #E78A61 0%,#800517 100%);
-background-repeat:repeat-x;
-}
-
-div#main {
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 40px;
-  border-left: 1px solid #DDD;
-  border-right: 1px solid #DDD;
-  bottom: 30px;
-  background: rgba(255,255,255, 0.9);
-  width: 80%;
-  min-height: 850px;;
-  margin: 0 auto;
-  padding: 10px;
-
-  .image {
-    border: solid 2px #eee;
-    width: 100px;
-
-  }
-}
-
-.thumbnails {
-  width: 80%;
+.bs-example {
   margin-top: 20px;
   margin-left: 50px;
-  margin-right: 50px;
+  margin-right: 0px;
+
 }
-
-.bodywrap{
-background-image:url('http://www.authenticasia.net/images/thai-bg.jpg');
-}
-
-
 
 
 

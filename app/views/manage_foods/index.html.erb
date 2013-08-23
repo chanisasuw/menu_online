@@ -1,20 +1,15 @@
+<h1 class="page-header">Foods Management</h1>
 <div id="foodwrap">
-<h1>Management Menu</h1>
-<br>
-<br>
-<%= link_to(("Create a new food"), new_manage_food_path) %>
+<div class="clearfix">&nbsp;</div>
+<%= button_to "Create a new food", new_manage_food_path, :class => "btn btn-primary", :method => :get  %>
 <br>
 <%= will_paginate @foods %>
-<table class="table table-striped">
-<br>
-
-
+<table class="table table-striped table-hover">
 <tr>
 <th>ID</th>
 <th>Name</th>
 <th>Create at</th>
 <th>Action</th>
-
 </tr>
 <tr>
       <%= render partial: "list_foods", collection: @foods, as: "food" %>

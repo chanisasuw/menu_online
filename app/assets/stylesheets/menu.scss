@@ -1,36 +1,58 @@
-div#con {
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 40px;
-  border-left: 1px solid #DDD;
-  border-right: 1px solid #DDD;
-  bottom: 30px;
-  background: rgba(255,255,255, 0.9);
-  width: 80%;
-  min-height: 1000px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-
-.item  {
+.well  {
 border-radius: 5px 5px 5px 5px;
-width: 300px;
-padding: 15px;
-margin: 0 auto;
-background: #FFFFFF;
-border: solid 1px #eee;
-box-shadow: 0 0 7px #eee;
+width: 335px;
+box-shadow: 1 1 2px #eee;
 margin-right: 20px;
+margin-left: 20px;
 margin-bottom: 20px;
 float: left;
-display: block;
-.image {
-  border: solid 2px #eee
-}
 }
 
-.bodywrap{
-background-image:url('http://khongthe.com/wallpapers/nature/spices-247576.jpg');
+    .grid-block-container {
+    margin: 20px 0 0 -30px;
+    }
+
+    .caption {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(images/trans-black-50.png);
+    width: 100%;
+    height: 100%;
+    }
+    .caption h3, .caption p {
+    color: #fff;
+    margin: 20px;
+    }
+    .caption h3 {
+    margin: 20px 20px 10px;
+    }
+    .caption p {
+    font-size: .75em;
+    line-height: 1.5em;
+    margin: 0 20px 15px;
+    }
+    .caption a.learn-more {
+    padding: 5px 10px;
+    background: #08c;
+    color: #fff;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    font-weight: bold;
+    text-decoration: none;
+    }
+    .caption a.learn-more:hover {
+    background: #fff;
+    color: #08c;
+    }
+
+#navigation {
+  position: fixed;
+  top: 134px;
+  float: left;
+  width: 130px;
+  padding: 5px;
+  margin: 5px;
 }
 

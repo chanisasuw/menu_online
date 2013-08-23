@@ -1,74 +1,59 @@
-<div id="foodwrap">
-<h2>Create a new menu</h2>
-<br>
-<br>
-<div id="new_food">
-<%= form_for @food, :url => manage_foods_url do |f| %>
-  <table class="table table-striped">
-    <tr>
-    <td><%= ("Photo Food: ") %></td>
-    <td><span class="span1">
-     <%= f.file_field :photo %>
-       </span>
-         </td>
-    </tr>
-    <tr>
-    <td><%= ("Food Name: ") %></td>
-    <td><span class="span1">
-      <%= f.text_field :name, required: true , type: "text" %>
-      </span>
-      <br>
-    </td>
-    </tr>
+<div class="col-lg-6">
+<div class="well">
 
-    </tr>
-    <tr>
-    <td><%= ("Category: ") %></td>
-    <td><span class="span1">
-      <%= f.select :category, options_for_select(Category.all.map{|c| [c.name, c.id]}) %>
-      </span>
-      <br>
-    </td>
-    </tr>
+<legend>Create a new menu</legend>
+  <%= form_for @food, :url => manage_foods_url, html: {class: 'form-horizontal'} do |f| %>
 
-
-     <tr>
-    <td><%= ("Price: ") %></td>
-    <td><span class="span2">
-      <%= f.text_field :price, required: true , type: "text"%>
-      </span>
-      <br>
-    </td>
-    </tr>
-
-    <tr>
-    <td><%= ("Short comment: ") %></td>
-    <td><span class="span3">
-      <%= f.text_area :short_comment , id: "short_comment" , placeholder: "short details" %>
-      </span>
-      <br>
-    </td>
-    </tr>
-
-    <tr>
-    <td><%= ("Description: ") %></td>
-    <td><span class="span4">
-      <%= f.text_area :description , id: "description" ,:rows => 10, placeholder: "Full description"%>
-      </span>
-      <br>
-    </td>
-    </tr>
-
-    <tr>
-    <td></td>
-    <div><td><span class="span3">
-      <%= f.submit "Create", class: "btn" %>
-      </span>
-    </td>
+    <div class="form-group">
+      <%= f.label 'Name', class: 'col-lg-2 control-label' %>
+      <div class="col-lg-10">
+        <%= f.text_field :name, required: true, class: 'form-control' %>
+      </div>
     </div>
-    </tr>
-  </table>
+
+    <div class="form-group">
+    <%= f.label 'Photo Food:' , class: 'col-lg-2 control-label' %>
+      <div class="col-lg-10">
+        <%= f.file_field :photo,   class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+    <%= f.label 'Category:' , class: 'col-lg-2 control-label' %>
+      <div class="col-lg-10">
+        <select id="food_category" name="food[category]" class="form-control">
+          <%= options_for_select(Category.all.map{|c| [c.name, c.id]}) %>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+    <%= f.label 'Price:' , class: 'col-lg-2 control-label' %>
+      <div class="col-lg-10">
+      <%= f.text_field :price, required: true , type: "text" ,  class: "form-control"%>
+      </div>
+    </div>
+
+    <div class="form-group">
+    <%= f.label 'Short comment:' , class: 'col-lg-2 control-label' %>
+      <div class="col-lg-10">
+        <%= f.text_area :short_comment , id: "short_comment" , placeholder: "short details",  class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+    <%= f.label 'Description:' , class: 'col-lg-2 control-label' %>
+      <div class="col-lg-10">
+        <%= f.text_area :description , id: "description" ,:rows => 10, placeholder: "Full description" ,  class: "form-control"%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <a class="col-lg-2"> </a>
+      <div class="col-lg-10">
+        <%= f.submit "Create", class: "form-control" %>
+      </div>
+    </div>
+  <% end -%>
 </div>
-<% end -%>
-<script type="text/javascript"> $('#description').each(function(i, elem) {$(elem).wysihtml5(); });</script>
 </div>

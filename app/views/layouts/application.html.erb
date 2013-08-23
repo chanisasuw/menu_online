@@ -2,46 +2,73 @@
 <html>
 <head>
   <title>Thai Wild Lime - South Yarra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= stylesheet_link_tag controller_name, media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag controller_name %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
- <div id="hmenu">
-  <div id="list-menu">
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to "Thai Wild Lime", root_path, class: 'navbar-brand' %>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li><%= link_to("HOME", root_path) %> </li>
+          <li><%= link_to("MENU", menu_index_path) %></li>
+          <li><%= link_to("GALLERY", gallery_index_path) %></li>
+          <% if user_signed_in? %>
+          <li><%= link_to("FOODS MANAGEMENT", manage_foods_path) %></li>
+          <li><%= link_to("CATEGORIES", categories_path) %></li>
+          <li><%= link_to("USERS MANAGEMENT", manage_users_path)  %></li>
+          <% end %>
+          <!--li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Download <span class="caret"></span></a>
+            <ul class="dropdown-menu" aria-labelledby="download">
+              <li><a tabindex="-1" href="./bootstrap.min.css">bootstrap.min.css</a></li>
+              <li><a tabindex="-1" href="./bootstrap.css">bootstrap.css</a></li>
+              <li class="divider"></li>
+              <li><a tabindex="-1" href="./variables.less">variables.less</a></li>
+              <li><a tabindex="-1" href="./bootswatch.less">bootswatch.less</a></li>
+            </ul>
+          </li-->
+        </ul>
 
-    <table class= "table-menu">
-      <tr>
-      <th><span style="cursor:pointer"><%= link_to("HOME", root_path) %>  </span></th>
-      <th><span style="cursor:pointer"><%= link_to("MENU", menu_index_path) %></span></th>
-      <th><span style="cursor:pointer"><%= link_to("GALLERY", gallery_index_path) %></span></th>
-      <% if user_signed_in? %>
-      <th><span style="cursor:pointer"><%= link_to("FOODS MANAGEMENT", manage_foods_path) %>  </span></th>
-      <th><span style="cursor:pointer"><%= link_to("CATEGORIES", categories_path) %>  </span></th>
-      <th><span style="cursor:pointer"><%= link_to("USERS MANAGEMENT", manage_users_path)  %>  </span></th>
-      <th><span style="cursor:pointer"><%= link_to("LOGOUT", destroy_user_session_path) %>  </span></th>
-      <% end %>
-      <th><span style="cursor:pointer"><%= link_to("LOGIN", login_path) unless user_signed_in? %>  </span><th>
-      </tr>
-  </table>
-
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to t('LOGIN'), login_path unless user_signed_in? %>
+            <%= link_to t('LOGOUT'), destroy_user_session_path if user_signed_in? %>
+          </li>
+        </ul>
+      </div>
+    </div>
+      <!-- END NAVBAR CONTAINER -->
   </div>
-</div>
-  <div class="bodywrap">
+    <!-- END NAVBAR -->
+
+  <div class="container">
     <%= render partial: "shared/flashes" %>
     <%= yield %>
-
   </div>
-</body>
-<footer>
+
   <div id="footer">
-  <address>
-  <strong>Thai Wild Lime</strong><br>
-  69 Davis Avenue<br>
-  South Yarra Victoria, Australia 3141<br>
-  <abbr title="Phone">P:</abbr> (+61) 3-9876-6444
-</address>
-</footer>
+      <div class="page-header"></div>
+      <address>
+        <strong>Thai Wild Lime</strong><br>
+        69 Davis Avenue<br>
+        South Yarra Victoria, Australia 3141<br>
+        <abbr title="Phone">P:</abbr> (+61) 3-9876-6444
+      </address>
+  </div>
+
+</body>
 </html>

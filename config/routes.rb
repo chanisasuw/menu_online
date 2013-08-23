@@ -7,7 +7,11 @@ Fern::Application.routes.draw do
   end
 
   resources :manage_users, only: [:index, :new, :create, :edit, :update, :show, :destroy]
-  resources :home, only: [:index]
+  resources :home, only: [:index] do
+    collection do
+      get :fern
+    end
+  end
   resources :manage_foods
   resources :menu ,only: [:index, :show]
   resources :categories, only: [:index, :new, :create, :destroy]

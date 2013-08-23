@@ -1,41 +1,41 @@
 <br>
 <br>
-<div class = "wrap">
-
-<div class = "main">
+<br>
+<div class="panel panel-default">
+  <div class="panel-heading">
 <h3>Log In</h3>
-
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  </div>
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
     <table>
       <tr>
         <td><%= f.label :email %></td>
         <td><%= f.email_field :email, :autofocus => true   %></td>
       </tr>
-    <tr>
-      <td><%= f.label :password %></td>
-      <td><%= f.password_field :password %></td>
+      <tr>
+        <td><%= f.label :password %></td>
+        <td><%= f.password_field :password %></td>
       </tr>
 
-  <% if devise_mapping.rememberable? -%>
-  <tr>
-    <td></td>
-    <td>
-      <div class="row-fluid">
+    <% if devise_mapping.rememberable? -%>
+      <tr>
+        <td></td>
+        <td>
+        <div class="row-fluid">
           <div style="vertical-align: middle; padding-bottom: 5px;"><%= f.check_box :remember_me %> &nbsp; Remember Me</div>
-      </div>
-    </td>
-  </tr>
-<tr style="padding-top: 10px;">
-  <td></td>
-  <td><div style="padding-top: 5px;"><%= f.submit "Sign in" , class: "btn btn-warning" %></div></td>
-</tr>
-<% end %>
- </table>
-  <% end -%>
+        </div>
+        </td>
+      </tr>
+      <tr style="padding-top: 10px;">
+        <td></td>
+        <td><div style="padding-top: 5px;"><%= f.submit "Sign in" , class: "btn btn-warning" %></div></td>
+      </tr>
+    <% end %>
+    </table>
+    <% end -%>
 
 
 <br>
 <%= render "devise/shared/links" %>
 
 </div>
-</div>
+

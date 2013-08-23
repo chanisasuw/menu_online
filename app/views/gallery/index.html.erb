@@ -1,11 +1,15 @@
-<div class="photos_list">
-<div class="portfolioFilter btn-group">
-  <button href="#" data-filter="*" class="current btn">show all</button>
-  <%= render partial: "list_category", collection: @categories, as: :category %>
-</div>
-<div class="portfolioContainer">
-  <%= render partial: "list_photo", collection: @foods , as: :food %>
-</div>
+<div class="panel panel-primary">
+  <div calss="panel-heading">
+    <div class="portfolioFilter btn-group">
+      <button href="#" data-filter="*" class="current btn btn-primary">show all</button>
+      <%= render partial: "list_category", collection: @categories, as: :category %>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="portfolioContainer">
+    <%= render partial: "list_photo", collection: @foods , as: :food %>
+    </div>
+  </div>
 </div>
 
 
